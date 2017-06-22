@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NinetyNineCatsDay1</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<h6>User: <%= user[user_name] %> </h6>
+
+<form action="index.html" method="post">
+
+
+  <% submit_text = (user.persisted? ? 'Logout' : 'Login') %>
+  <input type="submit" value="<%= submit_text %>">
+
+  </form>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<% action = (user.persisted? ? session_url : users_url) %>
+
+<form action="<%= action %>" method="post">
+
+<label for="user_name">Username</label>
+<input type="text" name="user[user_name]" id ="user_name" value="<%= user.user_name %>">
+<br>
+
+<label for="password">Password</label>
+<input type="password" name="user[password]" id ="password" value="<%= user.password %>">
+<br>
+
+<% submit_text = (user.persisted? ? 'Login' : 'Signup') %>
+<input type="submit" value="<%= submit_text %>">
+
+</form>
